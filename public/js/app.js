@@ -4,7 +4,7 @@ const msgOne = document.getElementById('message-1');
 const msgTwo = document.getElementById('message-2');
 
 function fetchForcast(address) {
-  fetch(`http://localhost:3000/weather?address=${address}`)
+  fetch(`/weather?address=${address}`)
     .then((response) => {
       if (response.status === 404) {
         msgOne.textContent = response.statusText;
