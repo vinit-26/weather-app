@@ -13,7 +13,9 @@ const forcast = (location, cb) => {
     } else {
       const data = res.body.current;
       cb(null, {
-        description: `${data.weather_descriptions[0]}. It is currently ${data.temperature} degree out. It feels like ${data.feelslike} degree.\n\There is ${data.precip}% chance of rain`,
+        description: `${data.weather_descriptions[0]}. It is currently ${data.temperature} degree out.
+        It feels like ${data.feelslike} degree.
+        There is ${data.precip}% chance of rain. ${data.humidity}% Humidity Today`,
         temperature: data.temperature,
         feelslike: data.feelslike,
       });
